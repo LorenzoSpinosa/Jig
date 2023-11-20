@@ -1,8 +1,8 @@
 //
 //  GearView.swift
-//  Jig
+//  Jiggi
 //
-//  Created by LorenzoSpinosa on 15/11/23.
+//  Created by LorenzoSpinosa on 20/11/23.
 //
 
 
@@ -17,7 +17,7 @@ struct GearView: View {
                 }
                 .searchable(text: $searchText)
             }
-        }    
+        }
 #Preview {
     GearView()
 }
