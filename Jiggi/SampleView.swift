@@ -11,7 +11,7 @@ import ARKit
 
 struct CubeModel: View {
     var body: some View {
-        ARViewContainer().edgesIgnoringSafeArea(.all)
+        ARViewContainer()
     }
 }
 
@@ -21,8 +21,8 @@ struct ARViewContainer: UIViewRepresentable {
         let arView = ARView(frame: .zero)
 
         // Create a cube model
-        let mesh = MeshResource.generateBox(size: 0.1, cornerRadius: 0.005)
-        let material = SimpleMaterial(color: .gray, roughness: 0.15, isMetallic: true)
+        let mesh = MeshResource.generateBox(size: 0.5, cornerRadius: 0.005)
+        let material = SimpleMaterial(color: .red, roughness: 0.15, isMetallic: true)
         let model = ModelEntity(mesh: mesh, materials: [material])
 
         // Create horizontal plane anchor for the content

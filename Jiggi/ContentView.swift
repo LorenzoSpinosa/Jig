@@ -8,292 +8,230 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var searchText = ""
+    @State private var showARView = false
+    
     var body: some View {
         
         
         NavigationView {
-            VStack {
-                List {
-                    DisclosureGroup("Featured") {
-                        
-                        ScrollView(.horizontal) {
-                            
-                            HStack() {
-                                NavigationLink(destination: ARViewContainer()) {
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("sample")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                                    .overlay(
-                                        Text("Test")
-                                            .font(.title)
-                                            .foregroundColor(.white)
-                                            .background(Color.black.opacity(0.8))
-                                            .cornerRadius(8)
-                                            .padding(8),
-                                        alignment: .center
-                                    )
-                                }
-                                
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("solarpannel")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                                    .overlay(
-                                        Text("Solar cell")
-                                            .font(.title)
-                                            .foregroundColor(.white)
-                                            .background(Color.black.opacity(0.8))
-                                            .cornerRadius(8)
-                                            .padding(8),
-                                        alignment: .center
-                                    )
-                                
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("engine")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                                    .overlay(
-                                        Text("components")
-                                            .font(.title)
-                                            .foregroundColor(.white)
-                                            .background(Color.black.opacity(0.8))
-                                            .cornerRadius(8)
-                                            .padding(8),
-                                        alignment: .center
-                                    )
-                                
-                                
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("plane")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                                    .overlay(
-                                        Text("plane model")
-                                            .font(.title)
-                                            .foregroundColor(.white)
-                                            .background(Color.black.opacity(0.8))
-                                            .cornerRadius(8)
-                                            .padding(8),
-                                        alignment: .center
-                                    )
-                                
-                                
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("car")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                                    .overlay(
-                                        Text("Car painting ")
-                                            .font(.title)
-                                            .foregroundColor(.white)
-                                            .background(Color.black.opacity(0.8))
-                                            .cornerRadius(8)
-                                            .padding(8),
-                                        alignment: .center
-                                    )
-                                
-                                
-                                
-                                
-                                
-                            }
-                        }
-                    }
+            
+            List {
+                DisclosureGroup("Featured") {
                     
-                    DisclosureGroup("Templates") {
-                        ScrollView(.horizontal){
-                            HStack {
+                    ScrollView(.horizontal) {
+                        
+                        HStack() {
+                            
+                            NavigationLink(destination: ARViewContainer()) {
                                 
-                                Rectangle()
+                                Image("Cube")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
                                     .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
                                     .cornerRadius(10)
-                                    .padding(10)
+                                
+                                
                                     .overlay(
-                                        Image("present")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                                    .overlay(
-                                        Text("Forex chart")
+                                        Text("Cube")
                                             .font(.title)
                                             .foregroundColor(.white)
                                             .background(Color.black.opacity(0.8))
                                             .cornerRadius(8)
-                                            .padding(8),
+                                        ,
                                         alignment: .center
                                     )
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("sample")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
                             }
-                        }
-                    }
-                    DisclosureGroup("Science") {
-                        ScrollView(.horizontal){
-                            HStack {
+                            
+                            Button(action: {
+                                showARView.toggle()
+                            }) {
+                                Text("Go to AR View")
+                                    .padding()
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
                                 
-                                
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("sample")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("sample")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                            }
+                            //prova con:label
+                                }
+                           
+                        .fullScreenCover(isPresented: $showARView) {
+                            ARViewContainer()
                         }
-                    }
-                    DisclosureGroup("Motor Racing") {
-                        ScrollView(.horizontal){
-                            HStack {
-                                
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("sample")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("sample")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                            }
-                        }
-                    }
-                    DisclosureGroup("Space") {
-                        ScrollView(.horizontal){
-                            HStack {
-                                
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("sample")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                                Rectangle()
-                                    .frame(width: 200, height: 150)
-                                    .foregroundColor(.gray)
-                                    .cornerRadius(10)
-                                    .padding(10)
-                                    .overlay(
-                                        Image("sample")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                            .padding(10)
-                                    )
-                            }
-                        }
+                        
+                        
+                        Image("solarpannel")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                        
+                            .overlay(
+                                Text("Solar cell")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                    .background(Color.black.opacity(0.8))
+                                    .cornerRadius(8)
+                                ,
+                                alignment: .center
+                            )
+                        
+                        
+                        Image("engine")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                        
+                        
+                            .overlay(
+                                Text("components")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                    .background(Color.black.opacity(0.8))
+                                    .cornerRadius(8)
+                                ,
+                                alignment: .center
+                            )
+                        
+                        Image("plane")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                            .overlay(
+                                Text("plane model")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                    .background(Color.black.opacity(0.8))
+                                    .cornerRadius(8)
+                                ,
+                                alignment: .center
+                            )
+                        
+                        
+                        
+                        Image("car")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                            .padding(10)
+                        
+                            .overlay(
+                                Text("Car painting ")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                    .background(Color.black.opacity(0.8))
+                                    .cornerRadius(8)
+                                ,
+                                alignment: .center
+                            )
+                        
+                        
                     }
                 }
             }
-            .searchable(text: $searchText)
+            
+            DisclosureGroup("Templates") {
+                ScrollView(.horizontal){
+                    HStack {
+                        
+                        
+                        
+                        
+                        Image("presentation")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                            .padding(10)
+                        
+                            .overlay(
+                                Text("Forex chart")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                    .background(Color.black.opacity(0.8))
+                                    .cornerRadius(8)
+                                    .padding(8),
+                                alignment: .center
+                            )
+                        
+                        Image("sample")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                            .padding(10)
+                        
+                    }
+                }
+            }
+            DisclosureGroup("Science") {
+                ScrollView(.horizontal){
+                    HStack {
+                        Image("sample")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                            .padding(10)
+                        
+                        Image("sample")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                            .padding(10)
+                    }
+                }
+            }
+            DisclosureGroup("Motor Racing") {
+                ScrollView(.horizontal){
+                    HStack {
+                        Image("sample")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                            .padding(10)
+                        
+                        Image("sample")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                            .padding(10)
+                        
+                    }
+                }
+            }
+            DisclosureGroup("Space") {
+                ScrollView(.horizontal){
+                    HStack {
+                        
+                        Image("sample")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                            .padding(10)
+                        
+                        Image("sample")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 150)
+                            .cornerRadius(10)
+                            .padding(10)
+                        
+                    }
+                }
+            }
         }
     }
+        .searchable(text: $searchText)
 }
+}
+
 
 #Preview {
     ContentView()
