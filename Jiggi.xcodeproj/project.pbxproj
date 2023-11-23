@@ -9,26 +9,36 @@
 /* Begin PBXBuildFile section */
 		61AF30A62B0B9CD50039A072 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AF30A52B0B9CD50039A072 /* ContentView.swift */; };
 		61AF30A82B0B9CD60039A072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AF30A72B0B9CD60039A072 /* Assets.xcassets */; };
-		61AF30AB2B0B9CD60039A072 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AF30AA2B0B9CD60039A072 /* Preview Assets.xcassets */; };
 		61AF30CE2B0BA3740039A072 /* JiggiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AF30CD2B0BA3740039A072 /* JiggiApp.swift */; };
 		61AF30D02B0BA3A20039A072 /* plusview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AF30CF2B0BA3A20039A072 /* plusview.swift */; };
 		61AF30D22B0BA3BC0039A072 /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AF30D12B0BA3BC0039A072 /* GearView.swift */; };
 		61AF30D42B0BA3DB0039A072 /* personView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AF30D32B0BA3DB0039A072 /* personView.swift */; };
 		61AF30D62B0BA4100039A072 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AF30D52B0BA4100039A072 /* SampleView.swift */; };
 		61AF30D82B0BA8400039A072 /* CubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AF30D72B0BA8400039A072 /* CubeView.swift */; };
+		61D7E7D02B0F8EAD00AE6A0F /* robot_walk_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61D7E7CF2B0F8EAD00AE6A0F /* robot_walk_idle.usdz */; };
+		61D7E7D32B0F909B00AE6A0F /* RobotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7E7D22B0F909B00AE6A0F /* RobotView.swift */; };
+		61D7E7D82B0F997900AE6A0F /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61D7E7D72B0F997900AE6A0F /* toy_car.usdz */; };
+		61D7E7DA2B0F998100AE6A0F /* toy_biplane_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 61D7E7D92B0F998100AE6A0F /* toy_biplane_idle.usdz */; };
+		61D7E7DC2B0F9A3E00AE6A0F /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7E7DB2B0F9A3E00AE6A0F /* CarView.swift */; };
+		61D7E7DF2B0F9B4A00AE6A0F /* PlaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D7E7DE2B0F9B4A00AE6A0F /* PlaneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61AF30A02B0B9CD50039A072 /* Jiggi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jiggi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AF30A52B0B9CD50039A072 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		61AF30A72B0B9CD60039A072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		61AF30AA2B0B9CD60039A072 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		61AF30CD2B0BA3740039A072 /* JiggiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiggiApp.swift; sourceTree = "<group>"; };
 		61AF30CF2B0BA3A20039A072 /* plusview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plusview.swift; sourceTree = "<group>"; };
 		61AF30D12B0BA3BC0039A072 /* GearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearView.swift; sourceTree = "<group>"; };
 		61AF30D32B0BA3DB0039A072 /* personView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personView.swift; sourceTree = "<group>"; };
 		61AF30D52B0BA4100039A072 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		61AF30D72B0BA8400039A072 /* CubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeView.swift; sourceTree = "<group>"; };
+		61D7E7CF2B0F8EAD00AE6A0F /* robot_walk_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = robot_walk_idle.usdz; path = ../../../../../Downloads/robot_walk_idle.usdz; sourceTree = "<group>"; };
+		61D7E7D22B0F909B00AE6A0F /* RobotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotView.swift; sourceTree = "<group>"; };
+		61D7E7D72B0F997900AE6A0F /* toy_car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = toy_car.usdz; path = ../../../../../Downloads/toy_car.usdz; sourceTree = "<group>"; };
+		61D7E7D92B0F998100AE6A0F /* toy_biplane_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = toy_biplane_idle.usdz; path = ../../../../../Downloads/toy_biplane_idle.usdz; sourceTree = "<group>"; };
+		61D7E7DB2B0F9A3E00AE6A0F /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
+		61D7E7DE2B0F9B4A00AE6A0F /* PlaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +72,13 @@
 			isa = PBXGroup;
 			children = (
 				61AF30CD2B0BA3740039A072 /* JiggiApp.swift */,
+				61D7E7DD2B0F9A4600AE6A0F /* tab bar */,
 				61AF30A52B0B9CD50039A072 /* ContentView.swift */,
-				61AF30CF2B0BA3A20039A072 /* plusview.swift */,
-				61AF30D12B0BA3BC0039A072 /* GearView.swift */,
-				61AF30D32B0BA3DB0039A072 /* personView.swift */,
 				61AF30D52B0BA4100039A072 /* SampleView.swift */,
 				61AF30D72B0BA8400039A072 /* CubeView.swift */,
+				61D7E7D22B0F909B00AE6A0F /* RobotView.swift */,
+				61D7E7DB2B0F9A3E00AE6A0F /* CarView.swift */,
+				61D7E7DE2B0F9B4A00AE6A0F /* PlaneView.swift */,
 				61AF30A72B0B9CD60039A072 /* Assets.xcassets */,
 				61AF30A92B0B9CD60039A072 /* Preview Content */,
 			);
@@ -77,9 +88,21 @@
 		61AF30A92B0B9CD60039A072 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				61AF30AA2B0B9CD60039A072 /* Preview Assets.xcassets */,
+				61D7E7CF2B0F8EAD00AE6A0F /* robot_walk_idle.usdz */,
+				61D7E7D72B0F997900AE6A0F /* toy_car.usdz */,
+				61D7E7D92B0F998100AE6A0F /* toy_biplane_idle.usdz */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		61D7E7DD2B0F9A4600AE6A0F /* tab bar */ = {
+			isa = PBXGroup;
+			children = (
+				61AF30D12B0BA3BC0039A072 /* GearView.swift */,
+				61AF30CF2B0BA3A20039A072 /* plusview.swift */,
+				61AF30D32B0BA3DB0039A072 /* personView.swift */,
+			);
+			path = "tab bar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +163,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61AF30AB2B0B9CD60039A072 /* Preview Assets.xcassets in Resources */,
+				61D7E7DA2B0F998100AE6A0F /* toy_biplane_idle.usdz in Resources */,
 				61AF30A82B0B9CD60039A072 /* Assets.xcassets in Resources */,
+				61D7E7D02B0F8EAD00AE6A0F /* robot_walk_idle.usdz in Resources */,
+				61D7E7D82B0F997900AE6A0F /* toy_car.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +178,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				61AF30D82B0BA8400039A072 /* CubeView.swift in Sources */,
+				61D7E7DC2B0F9A3E00AE6A0F /* CarView.swift in Sources */,
+				61D7E7DF2B0F9B4A00AE6A0F /* PlaneView.swift in Sources */,
 				61AF30D02B0BA3A20039A072 /* plusview.swift in Sources */,
 				61AF30D42B0BA3DB0039A072 /* personView.swift in Sources */,
+				61D7E7D32B0F909B00AE6A0F /* RobotView.swift in Sources */,
 				61AF30D62B0BA4100039A072 /* SampleView.swift in Sources */,
 				61AF30A62B0B9CD50039A072 /* ContentView.swift in Sources */,
 				61AF30CE2B0BA3740039A072 /* JiggiApp.swift in Sources */,

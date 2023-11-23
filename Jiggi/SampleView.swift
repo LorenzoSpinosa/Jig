@@ -4,7 +4,6 @@
 //
 //  Created by LorenzoSpinosa on 20/11/23.
 //
-
 import SwiftUI
 import RealityKit
 import ARKit
@@ -12,6 +11,8 @@ import ARKit
 struct CubeModel: View {
     var body: some View {
         ARViewContainer()
+        
+        
     }
 }
 

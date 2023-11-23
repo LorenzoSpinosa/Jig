@@ -22,15 +22,34 @@ struct ContentView: View {
                         
                         HStack() {
                             
-                            NavigationLink(destination: ARViewContainer()) {
+                            NavigationLink(destination: RobotView()) {
                                 
+                                Image("Robot")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 200, height: 150)
+                                    .cornerRadius(10)
+                                    .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                                
+                                
+                                    .overlay(
+                                        Text("Robot")
+                                            .font(.title)
+                                            .foregroundColor(.white)
+                                            .background(Color.black.opacity(0.8))
+                                            .cornerRadius(8)
+                                        ,
+                                        alignment: .center
+                                    )
+                            }
+                            Button(action: {
+                                showARView.toggle()
+                            }) {
                                 Image("Cube")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 200, height: 150)
                                     .cornerRadius(10)
-                                
-                                
                                     .overlay(
                                         Text("Cube")
                                             .font(.title)
@@ -40,23 +59,60 @@ struct ContentView: View {
                                         ,
                                         alignment: .center
                                     )
+
                             }
                             
-                            Button(action: {
-                                showARView.toggle()
-                            }) {
-                                Text("Go to AR View")
-                                    .padding()
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(10)
+                     
                                 
-                            //prova con:label
-                                }
                            
                         .fullScreenCover(isPresented: $showARView) {
                             ARViewContainer()
                         }
+                        
+                        
+                            
+                            NavigationLink(destination: CarView()) {
+                                
+                                Image("car")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 200, height: 150)
+                                    .cornerRadius(10)
+                                    .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                                
+                                
+                                    .overlay(
+                                        Text("toy car")
+                                            .font(.title)
+                                            .foregroundColor(.white)
+                                            .background(Color.black.opacity(0.8))
+                                            .cornerRadius(8)
+                                        ,
+                                        alignment: .center
+                                    )
+                            }
+                        
+                     
+                            NavigationLink(destination: PlaneView()) {
+                                
+                                Image("plane")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 200, height: 150)
+                                    .cornerRadius(10)
+                                    .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                                
+                                
+                                    .overlay(
+                                        Text("toy plane")
+                                            .font(.title)
+                                            .foregroundColor(.white)
+                                            .background(Color.black.opacity(0.8))
+                                            .cornerRadius(8)
+                                        ,
+                                        alignment: .center
+                                    )
+                            }
                         
                         
                         Image("solarpannel")
@@ -64,61 +120,10 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 200, height: 150)
                             .cornerRadius(10)
-                        
-                            .overlay(
-                                Text("Solar cell")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .background(Color.black.opacity(0.8))
-                                    .cornerRadius(8)
-                                ,
-                                alignment: .center
-                            )
-                        
-                        
-                        Image("engine")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 200, height: 150)
-                            .cornerRadius(10)
-                        
-                        
-                            .overlay(
-                                Text("components")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .background(Color.black.opacity(0.8))
-                                    .cornerRadius(8)
-                                ,
-                                alignment: .center
-                            )
-                        
-                        Image("plane")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 200, height: 150)
-                            .cornerRadius(10)
-                            .overlay(
-                                Text("plane model")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .background(Color.black.opacity(0.8))
-                                    .cornerRadius(8)
-                                ,
-                                alignment: .center
-                            )
-                        
-                        
-                        
-                        Image("car")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 200, height: 150)
-                            .cornerRadius(10)
                             .padding(10)
                         
                             .overlay(
-                                Text("Car painting ")
+                                Text("Solar cell")
                                     .font(.title)
                                     .foregroundColor(.white)
                                     .background(Color.black.opacity(0.8))
@@ -208,7 +213,9 @@ struct ContentView: View {
             DisclosureGroup("Space") {
                 ScrollView(.horizontal){
                     HStack {
+                      
                         
+                      
                         Image("sample")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -234,5 +241,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+        ContentView()
 }
